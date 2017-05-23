@@ -78,7 +78,12 @@ document.location = "index.html";
     </div>
 
     <article class="markdown-body">
-      
+    
+
+      <!-- <div class="rmodule">
+        <img src="images/tuv.png" width="250"><br>
+        <img src="images/val.png" height="250"><br>
+      </div> -->
       <h1>
         Featured Contributions
       </h1>
@@ -87,18 +92,18 @@ document.location = "index.html";
         Convex Programming for ℋ∞ System Identification 
       </h2>
       <p>
-        For robots with compliant actuators, feedback controllers are often designed to be energetically passive as a conservative heuristic for stability. To go beyond this performance limit is possible, but the new limit is based on model reliability. I propose to use ℋ∞ robust control theory to reach this limit, but the identification of ℋ∞ models turns out to be the real challenge. I've recently discovered that convex optimization can be used to identify robust models—and that robust models which include a list of frequency domain measurements can be a convex set. This may well yield a modeling technique which can predict the reliability-based limit for compliant robot actuators.
-        
+        For robots with series elastic actuators (SEAs), feedback controllers are often designed to be energetically passive as a conservative heuristic for stability. To go beyond this performance limit is possible, but requires knowledge of the environment. If perfect knowledge is available then the SEA-environment system can be made to have almost any closed loop behavior, but this isn't a realistic scenario since all models are at least slightly inaccurate. In order to know what a system can achieve, we need to quantify the uncertainty—and this means we must learn a bound on model inaccuracy. My approach uses convex optimization to learn the ℋ∞ additive uncertainty model.
+        </p><p>
         <!-- <a href=sysid.html><b>[Project Page]</b></a>  -->
-        <a href="http://walk-man.eu/results/workshops/iros-2016-workshop-force-torque-controlled-actuation/submitted-contribution/57-submission-by-gray-thomas/file"><b>[IROS 2016 Workshop Paper]</b></a>
-        <a href="Preprints/ThomasSentis2017ACC.pdf"><b>[ACC 2017 Preprint]</b></a>
+        In <a href="http://walk-man.eu/results/workshops/iros-2016-workshop-force-torque-controlled-actuation/submitted-contribution/57-submission-by-gray-thomas/file"><b>[IROS 2016 Workshop Paper]</b></a> my advisor Luis and I presented a frequency domain identification technique which attempted to demonstrate the breadth of uncertainty in linear models. We expanded on this data set in <a href="Preprints/ThomasSentis2017ACC.pdf"><b>[ACC 2017 Preprint]</b></a>, showing statistical evidence that the linear model could not adequately explain the data. And for this new type of data we proposed a rudimentary convex optimization problem learned a model and one of the two uncertainty weighting matrices at a single frequency. Our upcoming paper explores the mathmatics of robust model identification under the new assumptions of our experimentation scheme. <a href="Preprints/ThomasSentis2017preTAC.pdf">[pre-print]</a>
+        <!-- In our upcoming paper we provide a deep mathematical exploration of model learning at a single frequency. We prove the existence of an isomorphism between the three-tuple of model matrices and a single big matrix. We give geometric insight for this new parameterization, and prove that it is a convex space. We define a concept of model width and prove that it can be used to identify models in a far more complex convex optimization problem than before. We prove that in the limit as every possible behavior of the true model is exlored, the identified model matches the true model. We additionally motivate a noise-robustness modification which protects the identification strategy from sensor noise. -->
       </p>
 
       <h3>
         Stability of Tendon-Driven Robotic Hand Systems
       </h3>
       <p>
-        Fellow graduate student <a href="https://www.linkedin.com/in/raobotics">Prashant Rao</a> of the <a href="http://www.me.utexas.edu/~reneu/">ReNeu</a> lab and I have been working to explain the instability that crops up in robotic hands driven by tendons using the framework of passivity. Look for us at ICRA 2017 in Singapore!
+        Fellow graduate student <a href="https://www.linkedin.com/in/raobotics">Prashant Rao</a> of the <a href="http://www.me.utexas.edu/~reneu/">ReNeu</a> lab and I have been working to explain the instability that crops up in robotic hands driven by tendons using the framework of passivity. Look for us at ICRA 2017 in Singapore, where we are finalists for the best manipulation paper award!
       </p>
 
       <h2>
@@ -117,17 +122,14 @@ document.location = "index.html";
       </p>
 
       <h3>
-        Point Foot Biped Robot Hume: Attitude Estimator
+        Point Foot Biped Robot Hume Team
       </h3>
-      <img src="images/hume_with_leds.jpg" height="220"><iframe height="220" src="https://www.youtube.com/embed/_5ZN9hqWHms" frameborder="0" allowfullscreen></iframe>
-      <p> Figs: The Hume Robot uses red LED position markers which are (approximately) located by ceiling mounted cameras in the lab. The right video shows the orientation estimator tracking simulated movements. </p>
-      
       <p>
-      My data fusion algorithm tracks the robot torso pose implied by a noisy stream of led data. The algorithm is designed to handle occasional data ommisions, since the cameras do not reliably find all the LEDs. The filter does not spend cycles maintaining a covariance estimate like the Kalman filter, but it does acknoledge that the belief in current knowledge must be weighed against the information content of each set of detected LEDs: fusing the data via weighted least squares naturally downplays frames with few LEDs detected, and if the LEDs are sparse enough to leave geometric ambiguity, then the algorithm will naturally rely on the past data. A state of the art eigenvalue algorithm is used to cast the direction cosine matrix to a quaternion (and then back), to ensure validity of the rotation without sacrificing the linearity of the least squares problem.
+      In 2013 I worked with Donghyun Kim and Ye Zhao, as well as our advisor Luis Sentis, to control our series elastic biped robot. My focus was on real-time latency reduction, attitude estimation, and footstep planner theory. More detail is availiable in our journal paper <a href="http://wholebodycontrol.eu/awards.html">[Finalist, Best WBC Paper 2016]</a><a href="http://wholebodycontrol.eu/awards.html">[Finalist, Best WBC-Video 2016]</a><a href="http://ieeexplore.ieee.org/abstract/document/7736085/">[Link]</a><a href="https://www.researchgate.net/profile/Donghyun_Kim34/publication/309706836_Stabilizing_Series-Elastic_Point-Foot_Bipeds_Using_Whole-Body_Operational_Space_Control/links/5823f06408ae61258e3cd0c5.pdf">[pdf]</a> 
       </p>
-
-
-
+      <img src="images/hume_with_leds.jpg" height="220"><iframe height="220" src="https://www.youtube.com/embed/_5ZN9hqWHms" frameborder="0" allowfullscreen></iframe>
+      <p> Figs: The Hume Robot uses red LED position markers which are (approximately) located by ceiling mounted cameras in the lab. The right video shows the orientation estimator tracking simulated movements. My data fusion algorithm tracks the robot torso pose implied by a noisy stream of led data. The algorithm is designed to handle occasional data ommisions, since the cameras do not reliably find all the LEDs. The filter does not spend cycles maintaining a covariance estimate like the Kalman filter, but it does acknoledge that the belief in current knowledge must be weighed against the information content of each set of detected LEDs: fusing the data via weighted least squares naturally downplays frames with few LEDs detected, and if the LEDs are sparse enough to leave geometric ambiguity, then the algorithm will naturally rely on the past data. A state of the art eigenvalue algorithm is used to cast the direction cosine matrix to a quaternion (and then back), to ensure validity of the rotation without sacrificing the linearity of the least squares problem. </p>
+      
 
 
 
