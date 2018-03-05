@@ -83,26 +83,58 @@ document.location = "index.html";
       <!-- <div class="rmodule">
         <img src="images/tuv.png" width="250"><br>
         <img src="images/val.png" height="250"><br>
-      </div> -->
-<h3>
+      </div> -->      <h3>
         Featured Contributions
       </h3>
       <ul>
         <li><a href="#SEA">High Performance Control of Series Elastic Robots</a></li>
+        <li><a href="#USF">Uncertain State Feedback</a></li>
+        <li><a href="#Exo">Optimal Force Control for Amplification Exoskeletons</a></li>
+        <li><a href="#Safe">Barrier Pairs and Safety Controllers</a></li>
+        <li><a href="#ILP">Trajectory Optimization for Series Elastic Robots</a></li>
         <li><a href="#ID">Robust ℋ∞ Model-Set Identification</a></li>
         <li><a href="#Rao">Award Winner: Stability of Elastic-Tendon-Driven Robotic Hands!</a></li>
         <li><a href="#MC">Computationally Efficient Multi-Contact Locomotion Planning</a></li>
         <li><a href="#Hume">Award Finalist: Point Foot Biped Robot Hume Team!</a></li>
-        <li><a href="#IHMC">Darpa VRC Winner: Award Finalist: Team IHMC!</a></li>
-      </ul>      
+        <li><a href="#IHMC">Darpa VRC Winner: IJHR Paper Award Winner: Team IHMC!</a></li>
+      </ul>
 
       <a name="SEA"></a>
       <h3>
         High Performance Control of Series Elastic Robots
       </h3>
       <p>
-        For robots with series elastic actuators (SEAs) feedback controllers are often designed to be energetically passive as a conservative heuristic for stability. To go beyond this performance limit is possible, but requires knowledge of the environment. If perfect knowledge is available then the SEA-environment system can be made to have almost any closed loop behavior, but this isn't a realistic scenario since all models are at least slightly inaccurate. I plan to apply my robust model-set identification technique alongside LMI-based ℋ∞ controller synthesis to the NASA Valkyrie Robot's elastic actuators in order to achieve control performance that beats the current state of the art.    
+        For robots with series elastic actuators (SEAs) feedback controllers are often designed to be energetically passive as a conservative heuristic for stability. To go beyond this performance limit is possible, but requires knowledge of the environment. If perfect knowledge is available then the SEA-environment system can be made to have almost any closed loop behavior, but this isn't a realistic scenario since all models are at least slightly inaccurate. I aim to apply my robust model-set identification technique alongside LMI-based ℋ∞ controller synthesis to the NASA Valkyrie Robot's elastic actuators in order to achieve control performance that beats the current state of the art. 
       </p>
+
+      <a name="USF"></a>
+      <h3>
+        Uncertain State Feedback 
+      </h3>
+      <p> One fameously difficult problem in control theory is the optimal synthesis of static output feedback controllers. This problem is known to be NP-hard, which is unfortunate, since this problem is equivalent to optimally tuning PID controllers, state feedback controllers based on fixed state estimators, and low-order controller design in general. In this line of research, I'm pursuing a problem which is somewhere in between the convex full state feedback synthesis problem and the NP-hard static output feedback problem: uncertain state feedback. The uncertain state feedback problem is a special case of the static output feedback problem in which the output is an imperfect measurement of the full state. This is a complication relative to full state feedback, which assumes non-uncertain state feedback. The LMI synthesis problem from full state feedback synthesis becomes non-linear, but still permits a Q, Y change of variables, unlike the equivalent BMI from SOF.
+      </p>
+
+      <a name="Exo"></a>
+      <h3>
+        Optimal Force Control for Amplification Exoskeletons
+      </h3>
+      <p>  Amplification exoskeletons are designed to extend the capabilities of the human operator by amplifying their interaction forces with the world. Using force sensorized attachments between the human and the exoskeleton, this research seeks a control law which causes the human to feel a reduced environmental impedance regardless of joint or contact configuration, and it investigates the stability of such controllers under assumptions of unmodeled dynamics and uncertain human admittance.
+      </p>
+
+      <a name="Safe"></a>
+      <h3>
+        Barrier Pairs and Safety Controllers
+      </h3>
+      <p>  When hardware inputs are provided by untrusted sources, how can we guarantee the hardware will satisfy safety constraints? To answer this question I have, along with Binghan He, devised a backup safety controller which uses a minimum over quadratic lyapunov functions to determine when to switch to backup safety mode, and which control law to apply when it does so. <a href="https://arxiv.org/pdf/1802.10188.pdf">[ArXiv]</a> 
+      </p>
+
+      <a name="ILP"></a>
+      <h3>
+        Trajectory Optimization for Series Elastic Robots
+      </h3>
+      <p>  Series elastic robots typically have fairly linear actuator dynamics compared to their joint dynamics. To exploit this in trajectory optimization, Rachel Schlossman and I designed an iterative linear programming based trajectory optimizer which uses trust regions only for the robot impedance portion of the problem. See our <a href="https://arxiv.org/pdf/1802.10190.pdf">ArXiv pre-print</a>, submitted to IEEE IROS 2018 in Madrid, for details.
+      </p>
+
 
 
       <a name="ID"></a>
@@ -114,7 +146,6 @@ document.location = "index.html";
           <!-- <a href="Preprints/ThomasSentis2017preTAC.pdf">[pre-print]</a> -->
         <!-- In our upcoming paper we provide a deep mathematical exploration of model learning at a single frequency. We prove the existence of an isomorphism between the three-tuple of model matrices and a single big matrix. We give geometric insight for this new parameterization, and prove that it is a convex space. We define a concept of model width and prove that it can be used to identify models in a far more complex convex optimization problem than before. We prove that in the limit as every possible behavior of the true model is explored, the identified model matches the true model. We additionally motivate a noise-robustness modification which protects the identification strategy from sensor noise. -->
       </p>
-
       
       <a name="Rao"></a>
       <h3>
