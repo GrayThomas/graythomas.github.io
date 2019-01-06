@@ -18,7 +18,7 @@ document.location = "index.m.html";
 //-->
 </script>
 <title>Gray Cortright Thomas</title>
-<meta name="description" content="Robotics Researcher, NASA Space Technology Fellow, and Graduate Student at the University of Texas at Austin">
+<meta name="description" content="Robotics Researcher, NASA Space Technology Fellow, and Ph.D. Candidate at the University of Texas at Austin">
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -42,7 +42,7 @@ document.location = "index.m.html";
         Robotic Control Scholar<br>
         <a href="https://www.nasa.gov/feature/nstrf-2015">NASA Space Technology Fellow</a> 
         <a href="https://www.nasa.gov/feature/controlling-robots-with-a-spring-in-their-step">"Controlling Robots with a Spring in Their Step"</a><br>
-        Ph.D. Student at <a href="http://www.me.utexas.edu/graduate/areas/dsc">UT Austin</a> with 
+        Ph.D. Candidate at <a href="http://www.me.utexas.edu/graduate/areas/dsc">UT Austin</a> with 
         <a href="http://www.me.utexas.edu/faculty/faculty-directory/sentis">Luis Sentis</a><br>
         Formerly at <a href="http://robots.ihmc.us/">IHMC</a> with <a href="https://www.ihmc.us/groups/jpratt/">Jerry Pratt</a><br>
         gray.c.thomas&#64;[gmail.com or utexas.edu]
@@ -83,17 +83,13 @@ document.location = "index.m.html";
         <img src="images/tuv.png" width="250"><br>
         <img src="images/val.png" height="250"><br>
       </div> -->
-      <h3>
-        Featured Contributions
-      </h3>
       <ul>
         <li><a href="#SEA">High Performance Control of Series Elastic Robots</a></li>
-        <li><a href="#USF">Uncertain State Feedback</a></li>
-        <li><a href="#Exo">Optimal Force Control for Amplification Exoskeletons</a></li>
+        <li><a href="#Rao">Award Winner: Stability of Series Elastic Tendon-Driven Robotic Hands!</a></li>
+        <li><a href="#Exo">High Performance Force Control for Series Elastic Amplification Exoskeletons</a></li>
+        <li><a href="#ID">Robust ℋ∞ Model-Set Identification</a></li>
         <li><a href="#Safe">Barrier Pairs and Safety Controllers</a></li>
         <li><a href="#ILP">Trajectory Optimization for Series Elastic Robots</a></li>
-        <li><a href="#ID">Robust ℋ∞ Model-Set Identification</a></li>
-        <li><a href="#Rao">Award Winner: Stability of Elastic-Tendon-Driven Robotic Hands!</a></li>
         <li><a href="#MC">Computationally Efficient Multi-Contact Locomotion Planning</a></li>
         <li><a href="#Hume">Award Finalist: Point Foot Biped Robot Hume Team!</a></li>
         <li><a href="#IHMC">Darpa VRC Winner: IJHR Paper Award Winner: Team IHMC!</a></li>
@@ -104,37 +100,19 @@ document.location = "index.m.html";
         High Performance Control of Series Elastic Robots
       </h3>
       <p>
-        For robots with series elastic actuators (SEAs) feedback controllers are often designed to be energetically passive as a conservative heuristic for stability. To go beyond this performance limit is possible, but requires knowledge of the environment. If perfect knowledge is available then the SEA-environment system can be made to have almost any closed loop behavior, but this isn't a realistic scenario since all models are at least slightly inaccurate. I aim to apply my robust model-set identification technique alongside LMI-based ℋ∞ controller synthesis to the NASA Valkyrie Robot's elastic actuators in order to achieve control performance that beats the current state of the art. 
+        For robots with series elastic actuators (SEAs) feedback controllers are often designed to be energetically passive as a conservative heuristic for stability. To go beyond this performance limit is possible, but requires knowledge of the environment. If perfect knowledge is available then the SEA-environment system can have very high performance position control <a href="http://dynamicsystems.asmedigitalcollection.asme.org/article.aspx?articleid=2702914">[JDSMC 2018]</a>, but this isn't a realistic scenario most of the time. Recently, I've been working on a system of gain assignement to position, velocity, spring-deflection, and spring-deflection-rate controllers using frequency domain compliance plots (as shown below) to visualize controller design as shaping the compliance of the actuator, such that it isn't quite passive but is close enough not to be destabilized by common environments. My tests in the summer of 2018 demonstrated stiffer-than passive control on one of the NASA Valkyrie actuators (writeup in progress).
+        <img src="images/compliance_shaping.png">
       </p>
 
-      <a name="USF"></a>
-      <h3>
-        Uncertain State Feedback 
-      </h3>
-      <p> One fameously difficult problem in control theory is the optimal synthesis of static output feedback controllers. This problem is known to be NP-hard, which is unfortunate, since this problem is equivalent to optimally tuning PID controllers, state feedback controllers based on fixed state estimators, and low-order controller design in general. In this line of research, I'm pursuing a problem which is somewhere in between the convex full state feedback synthesis problem and the NP-hard static output feedback problem: uncertain state feedback. The uncertain state feedback problem is a special case of the static output feedback problem in which the output is an imperfect measurement of the full state. This is a complication relative to full state feedback, which assumes non-uncertain state feedback. The LMI synthesis problem from full state feedback synthesis becomes non-linear, but still permits a Q, Y change of variables, unlike the equivalent BMI from SOF.
-      </p>
+
 
       <a name="Exo"></a>
       <h3>
-        Optimal Force Control for Amplification Exoskeletons
+      Series Elastic Amplification Exoskeletons
       </h3>
-      <p>  Amplification exoskeletons are designed to extend the capabilities of the human operator by amplifying their interaction forces with the world. Using force sensorized attachments between the human and the exoskeleton, this research seeks a control law which causes the human to feel a reduced environmental impedance regardless of joint or contact configuration, and it investigates the stability of such controllers under assumptions of unmodeled dynamics and uncertain human admittance.
+      <p><img src="images/binghan_exo.png">
+      Amplification exoskeletons are designed to extend the capabilities of the human operator by amplifying their interaction forces with the world. Using force sensorized attachments between the human and the exoskeleton, this research studies the limitations of controllers which make the human feel stronger relative to the environment by amplifying the human's interaction forces. One important part of this research is understanding the behavior of the human operator when they are wearing an exoskeleton, since their unintentional changes to joint stiffness have a big influence on amplification performance <a href="https://arxiv.org/abs/1809.10560">[ArXiV]</a>. This reserach, which is done in collaboration with Binghan He, Nicolas Brissoneau, Luis Sentis, and <a href="https://apptronik.com/">Appronik Systems</a>, is currently scaling up to whole lower-body exoskeletons with contact constraints. I am also exploring the potential of soft cuffs to change the upper performance limitations along with UT undergraduate <a href="https://www.linkedin.com/in/jeremiah-coholich/">Jeremiah Coholich</a>: <img src="images/jeremiah_exo.jpg">
       </p>
-
-      <a name="Safe"></a>
-      <h3>
-        Barrier Pairs and Safety Controllers
-      </h3>
-      <p>  When hardware inputs are provided by untrusted sources, how can we guarantee the hardware will satisfy safety constraints? To answer this question I have, along with Binghan He, devised a backup safety controller which uses a minimum over quadratic lyapunov functions to determine when to switch to backup safety mode, and which control law to apply when it does so. <a href="https://arxiv.org/pdf/1802.10188.pdf">[ArXiv]</a> 
-      </p>
-
-      <a name="ILP"></a>
-      <h3>
-        Trajectory Optimization for Series Elastic Robots
-      </h3>
-      <p>  Series elastic robots typically have fairly linear actuator dynamics compared to their joint dynamics. To exploit this in trajectory optimization, Rachel Schlossman and I designed an iterative linear programming based trajectory optimizer which uses trust regions only for the robot impedance portion of the problem. See our <a href="https://arxiv.org/pdf/1802.10190.pdf">ArXiv pre-print</a>, submitted to IEEE IROS 2018 in Madrid, for details.
-      </p>
-
 
 
       <a name="ID"></a>
@@ -142,10 +120,17 @@ document.location = "index.m.html";
         Robust ℋ∞ Model-Set Identification 
       </h3>
       <p>
-        All control design problems are limited at high frequencies — roll-off constraints, passivity requirements, robust internal stability, cost function penalties on input, and margin requirements all methods for incorporating this reality into a design problem. These constraints all work against performance, so less conservative constraints are better. I've come to respect the philosophy that robust internal stability is the most fundamental of these limits. And since robust internal stability is based on a model-set description of the plant, I've designed an identification procedure which attempts to directly learn model-sets, specifically the additive uncertainty model-set from traditional ℋ∞ robust control theory, from single harmonic input output data <a href="http://walk-man.eu/results/workshops/iros-2016-workshop-force-torque-controlled-actuation/submitted-contribution/57-submission-by-gray-thomas/file"><b>[IROS 2016 WS]</b></a>.  The approach is parallel to other methods of system identification (prediction error, FFT-based, iterative identification for control) due to different assumptions on the nature of the identification experiment <a href="Preprints/ThomasSentis2017ACC.pdf"><b>[ACC 2017]</b></a>. It also benefits from a convex formulation which represents the model-set geometrically as a high dimensional generalization of a cone, a degenerate quadric, which makes the identification problem tractable.
-          <!-- <a href="Preprints/ThomasSentis2017preTAC.pdf">[pre-print]</a> -->
-        <!-- In our upcoming paper we provide a deep mathematical exploration of model learning at a single frequency. We prove the existence of an isomorphism between the three-tuple of model matrices and a single big matrix. We give geometric insight for this new parameterization, and prove that it is a convex space. We define a concept of model width and prove that it can be used to identify models in a far more complex convex optimization problem than before. We prove that in the limit as every possible behavior of the true model is explored, the identified model matches the true model. We additionally motivate a noise-robustness modification which protects the identification strategy from sensor noise. -->
+        All control design problems are limited at high frequencies — roll-off constraints, passivity requirements, robust internal stability, cost function penalties on input, and margin requirements all methods for incorporating this reality into a design problem. These constraints all work against performance, so less conservative constraints are better. I've come to respect the philosophy that robust internal stability is the most fundamental of these limits. And since robust internal stability is based on a model-set description of the plant, I've designed an identification procedure which attempts to directly learn model-sets, specifically the additive uncertainty model-set from traditional ℋ∞ robust control theory, from frequency domain input-output measurements <a href="http://walk-man.eu/results/workshops/iros-2016-workshop-force-torque-controlled-actuation/submitted-contribution/57-submission-by-gray-thomas/file"><b>[IROS 2016 WS]</b></a>.  The approach is parallel to other methods of system identification (prediction error, FFT-based, iterative identification for control) due to different assumptions on the nature of the identification experiment <a href="Preprints/ThomasSentis2017ACC.pdf"><b>[ACC 2017]</b></a>. It also benefits from a convex formulation which represents the model-set geometrically as a high dimensional generalization of a cone, a degenerate quadric, which makes the identification problem tractable. In our recently accepted paper <a href="https://arxiv.org/abs/1802.07695">[TAC 2019]</a> we provide an introduction to this "Quadric Inclusion Program" as well as an example which uses a set of orthonormal basis functions to learn a minimal uncertain model for the following frequency domain data
+        <img src="images/qip_example.png" height="250">
+        In this figure, I've plotted the frequency response of the uncertain SEA-like mechanical system shown in part c. Due to some nonlinear friction, the device does not have a consistent bode plot as the amplitude changes, and this is modelled by the three separate black lines in the main figure a. Using a combination of the orthonormal basis functions shown in part d, the quadric inclusion program (QIP) learns the uncertain model represented by the red shaded region. Essentially, QIP fits a model by squeezing the uncertainty up against the worst outlier data---shifting both the frequency domain weighting on the uncertainty and the nominal model to accomplish this aim. I aim to build on this theory until it is practically applicable to the problem of identifiation and synthesis for high performance series elastic robots and exoskeletons, though it certainly won't be limited to that use case. 
       </p>
+
+<!--       <a name="USF"></a>
+      <h3>
+        Uncertain State Feedback 
+      </h3>
+      <p> One fameously difficult problem in control theory is the optimal synthesis of static output feedback controllers. This problem is known to be NP-hard, which is unfortunate, since this problem is equivalent to optimally tuning PID controllers, state feedback controllers based on fixed state estimators, and low-order controller design in general. In this line of research, I'm pursuing a problem which is somewhere in between the convex full state feedback synthesis problem and the NP-hard static output feedback problem: uncertain state feedback. The uncertain state feedback problem is a special case of the static output feedback problem in which the output is an imperfect measurement of the full state. This is a complication relative to full state feedback, which assumes non-uncertain state feedback. The LMI synthesis problem from full state feedback synthesis becomes non-linear, but still permits a Q, Y change of variables, unlike the equivalent BMI from SOF.
+      </p> -->
 
       
       <a name="Rao"></a>
@@ -154,7 +139,25 @@ document.location = "index.m.html";
       </h3>
       <p>
         Fellow graduate student <a href="https://www.linkedin.com/in/raobotics">Prashant Rao</a> of the <a href="http://www.me.utexas.edu/~reneu/">ReNeu</a> lab and I explained the stiffness limits for robotic hands driven by series-elastic tendons, using a passivity framework. This research is Prashant's baby, but I was able to help put his ideas into a rigorous mathematical proof by introducing the passivity framework, segregating linear sub-spaces of motion and force, and ultimately re-deriving his empirical positive definiteness condition under those assumptions. I also came up with a second bound on the minimum passively achievable stiffness which isn't noticeable in Prashant's hardware; the bound only exists once a parallel stiffness is added to the system. Prashant gave a great presentation at ICRA 2017 in Singapore, featuring many of his latest demo-videos and results on Cartesian stiffness, and we landed the best manipulation paper award <a href="Preprints/RaoThomasSentisDeshpande2017ICRA.pdf"><b>[ICRA 2017]</b></a>!
+        <img src="images/prashant_award.jpg">
       </p>
+
+
+      <a name="Safe"></a>
+      <h3>
+        Barrier Pairs and Safety Controllers
+      </h3>
+      <p>  When hardware inputs are provided by untrusted sources, how can we guarantee the hardware will satisfy safety constraints? To answer this question I have, along with Binghan He, devised a backup safety controller which uses a minimum over quadratic lyapunov functions to determine when to switch to backup safety mode, and which control law to apply when it does so. <a href="https://ieeexplore.ieee.org/document/8431457">[ACC 2018]</a> We are also working on a proposal to allow these safety controller to pair up with adaptive controllers for amplification exoskeletons, to offer both the improved performance of adaptive control, with the safety gauarantees necesary to work with human operators.
+      <img src="images/safety_control.png">
+      </p>
+
+      <a name="ILP"></a>
+      <h3>
+        Trajectory Optimization for Series Elastic Robots
+      </h3>
+      <p>  Series elastic robots typically have fairly linear actuator dynamics compared to their joint dynamics. To exploit this in trajectory optimization, Rachel Schlossman and I designed an iterative linear programming based trajectory optimizer which uses trust regions only for the robot impedance portion of the problem. See our <a href="https://arxiv.org/pdf/1802.10190.pdf">ROBIO 2018</a> paper for details. Rachel and I have been working to extend this to optimize the falling and jumping behavior of a robotic leg with series elastic actuators.
+      </p>
+
 
       <a name="MC"></a>
       <h3>
@@ -166,7 +169,7 @@ document.location = "index.m.html";
 <iframe width="300" src="https://www.youtube.com/embed/o1YkloKvPxA" frameborder="0" allowfullscreen></iframe>
       <iframe width="300" src="https://www.youtube.com/embed/9voQCAyvg0k" frameborder="0" allowfullscreen></iframe><br>
       <p> 
-        What we call the "dynamic optimization" includes the selection of foot steps and hand-holds from a finite list of possible contacts as well as the velocity profile over the center of mass path. Our approach bears similarity both to phase space locomotion planning techniques for bipedal walking and the minimum time trajectory scaling problem for robot arms. A fundamental aspect of the algorithm's efficiency is its use of linear programming with reuse of the active set of inequality constraints—an emerging trend. The videos give some hint at the algorithm, but the paper is still your best bet.
+        What we call the "dynamic optimization" includes the selection of foot steps and hand-holds from a finite list of possible contacts as well as the velocity profile over the center of mass path. Our approach bears similarity both to phase space locomotion planning techniques for bipedal walking and the minimum time trajectory scaling problem for robot arms. A fundamental aspect of the algorithm's efficiency is its use of linear programming with reuse of the active set of inequality constraints.
         <br>
         <!-- <a href=mcplan.html><b>[Project Page]</b></a>  -->
         
