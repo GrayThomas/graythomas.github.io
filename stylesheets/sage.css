@@ -1109,4 +1109,799 @@ footer .owner p a {
 .highlight .vc { color: #008080 } /* Name.Variable.Class */
 .highlight .vg { color: #008080 } /* Name.Variable.Global */
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
-.highlight .il { color: #009999 } /* Literal.Number.Integer.Long 
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+
+
+
+
+.filtered-capsules .capsule {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    height: 150px;
+    font-size: 12px;
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+.filtered-capsules .capsule>.capsule-info>.capsule-details {
+    margin: 3px 0 0;
+}
+
+div {
+    display: block;
+}
+
+#DIV_1 {
+    box-sizing: border-box;
+    display: flex;
+/*    border-style: solid; looks silly. overlaps the picture.*/
+    zoom: 0.65;
+    height: 150px;
+    /*width: 998px;*/
+    perspective-origin: 499px 75px;
+    transform-origin: 499px 75px;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 20px 0px;
+}/*#DIV_1*/
+
+#DIV_1:after {
+    box-sizing: border-box;
+    display: block;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_1:after*/
+
+#DIV_1:before {
+    box-sizing: border-box;
+    display: block;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_1:before*/
+
+#A_2 {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    display: block;
+    height: 150px;
+    min-height: auto;
+    min-width: auto;
+    text-decoration: none solid rgb(46, 132, 239);
+    width: 215px;
+    column-rule-color: rgb(46, 132, 239);
+    perspective-origin: 107.5px 75px;
+    transform-origin: 107.5px 75px;
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#A_2*/
+
+#A_2:after {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    min-height: auto;
+    min-width: auto;
+    text-decoration: none solid rgb(46, 132, 239);
+    column-rule-color: rgb(46, 132, 239);
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#A_2:after*/
+
+#A_2:before {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    min-height: auto;
+    min-width: auto;
+    text-decoration: none solid rgb(46, 132, 239);
+    column-rule-color: rgb(46, 132, 239);
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#A_2:before*/
+
+#DIV_3 {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    cursor: pointer;
+    height: 150px;
+    text-decoration: none solid rgb(46, 132, 239);
+    width: 210px;
+    column-rule-color: rgb(46, 132, 239);
+    perspective-origin: 105px 75px;
+    transform-origin: 105px 75px;
+    caret-color: rgb(46, 132, 239);
+    background: rgb(229, 229, 229) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0px 5px 0px 0px;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#DIV_3*/
+
+#DIV_3:after {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    cursor: pointer;
+    text-decoration: none solid rgb(46, 132, 239);
+    column-rule-color: rgb(46, 132, 239);
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#DIV_3:after*/
+
+#DIV_3:before {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    cursor: pointer;
+    text-decoration: none solid rgb(46, 132, 239);
+    column-rule-color: rgb(46, 132, 239);
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#DIV_3:before*/
+
+#IMG_4 {
+    bottom: -75px;
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    cursor: pointer;
+    display: block;
+    height: 150px;
+    left: 0px;
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(46, 132, 239);
+    top: 75px;
+    vertical-align: middle;
+    width: 210px;
+    column-rule-color: rgb(46, 132, 239);
+    perspective-origin: 105px 75px;
+    transform: matrix(1, 0, 0, 1, 0, -75);
+    transform-origin: 105px 75px;
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#IMG_4*/
+
+#IMG_4:after {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    cursor: pointer;
+    text-decoration: none solid rgb(46, 132, 239);
+    column-rule-color: rgb(46, 132, 239);
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#IMG_4:after*/
+
+#IMG_4:before {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    cursor: pointer;
+    text-decoration: none solid rgb(46, 132, 239);
+    column-rule-color: rgb(46, 132, 239);
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#IMG_4:before*/
+
+#DIV_5 {
+    box-sizing: border-box;
+    display: flex;
+    height: 150px;
+    min-height: auto;
+    min-width: auto;
+    width: 538px;
+    perspective-origin: 269px 75px;
+    transform-origin: 269px 75px;
+    flex: 1 1 0%;
+    flex-flow: column nowrap;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0px 0px 0px 15px;
+    overflow: hidden;
+}/*#DIV_5*/
+
+#DIV_5:after {
+    box-sizing: border-box;
+    display: block;
+    min-height: auto;
+    min-width: auto;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_5:after*/
+
+#DIV_5:before {
+    box-sizing: border-box;
+    display: block;
+    min-height: auto;
+    min-width: auto;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_5:before*/
+
+#DIV_6 {
+    box-sizing: border-box;
+    height: 17px;
+    min-height: auto;
+    min-width: auto;
+    width: 538px;
+    perspective-origin: 269px 8.5px;
+    transform-origin: 269px 8.5px;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 3px 0px 0px;
+}/*#DIV_6*/
+
+#DIV_6:after {
+    box-sizing: border-box;
+    min-height: auto;
+    min-width: auto;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_6:after*/
+
+#DIV_6:before {
+    box-sizing: border-box;
+    min-height: auto;
+    min-width: auto;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_6:before*/
+
+#A_7 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    text-decoration: none solid rgb(255, 255, 255);
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 0px 0px;
+    transform-origin: 0px 0px;
+    caret-color: rgb(255, 255, 255);
+    background: rgb(217, 112, 39) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0px 6px 0px 0px;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 0px 4px;
+}/*#A_7*/
+
+#A_7:after {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    text-decoration: none solid rgb(255, 255, 255);
+    column-rule-color: rgb(255, 255, 255);
+    caret-color: rgb(255, 255, 255);
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#A_7:after*/
+
+#A_7:before {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    text-decoration: none solid rgb(255, 255, 255);
+    column-rule-color: rgb(255, 255, 255);
+    caret-color: rgb(255, 255, 255);
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#A_7:before*/
+
+#SPAN_8 {
+    box-sizing: border-box;
+    perspective-origin: 0px 0px;
+    transform-origin: 0px 0px;
+    font: italic normal 700 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#SPAN_8*/
+
+#SPAN_8:after {
+    box-sizing: border-box;
+    font: italic normal 700 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#SPAN_8:after*/
+
+#SPAN_8:before {
+    box-sizing: border-box;
+    font: italic normal 700 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#SPAN_8:before*/
+
+#DIV_9 {
+    box-sizing: border-box;
+    display: flex;
+    height: 28px;
+    min-height: auto;
+    min-width: auto;
+    width: 538px;
+    align-items: center;
+    perspective-origin: 269px 14px;
+    transform-origin: 269px 14px;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_9*/
+
+#DIV_9:after {
+    box-sizing: border-box;
+    display: block;
+    min-height: auto;
+    min-width: auto;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_9:after*/
+
+#DIV_9:before {
+    box-sizing: border-box;
+    display: block;
+    min-height: auto;
+    min-width: auto;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_9:before*/
+
+#A_10 {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    display: block;
+    height: 28px;
+    min-height: auto;
+    min-width: auto;
+    text-decoration: none solid rgb(46, 132, 239);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 490px;
+    column-rule-color: rgb(46, 132, 239);
+    perspective-origin: 245px 14px;
+    transform-origin: 245px 14px;
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    flex: 1 1 0%;
+    font: normal normal 400 normal 20px / 28.5714px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0px 10px 0px 0px;
+    outline: rgb(46, 132, 239) none 0px;
+    overflow: hidden;
+}/*#A_10*/
+
+#A_10:after {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    min-height: auto;
+    min-width: auto;
+    text-decoration: none solid rgb(46, 132, 239);
+    white-space: nowrap;
+    column-rule-color: rgb(46, 132, 239);
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 400 normal 20px / 28.5714px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#A_10:after*/
+
+#A_10:before {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    min-height: auto;
+    min-width: auto;
+    text-decoration: none solid rgb(46, 132, 239);
+    white-space: nowrap;
+    column-rule-color: rgb(46, 132, 239);
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 400 normal 20px / 28.5714px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#A_10:before*/
+
+#SPAN_11 {
+    box-sizing: border-box;
+    display: flex;
+    height: 20px;
+    min-height: auto;
+    min-width: auto;
+    text-align: center;
+    width: 28px;
+    perspective-origin: 14px 10px;
+    transform-origin: 14px 10px;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0px 10px 0px 0px;
+}/*#SPAN_11*/
+
+#SPAN_11:after {
+    box-sizing: border-box;
+    display: block;
+    min-height: auto;
+    min-width: auto;
+    text-align: center;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#SPAN_11:after*/
+
+#SPAN_11:before {
+    box-sizing: border-box;
+    display: block;
+    min-height: auto;
+    min-width: auto;
+    text-align: center;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#SPAN_11:before*/
+
+#IMG_12 {
+    box-sizing: border-box;
+    display: block;
+    height: 20px;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: auto;
+    min-width: auto;
+    text-align: center;
+    vertical-align: middle;
+    width: 0px;
+    perspective-origin: 0px 10px;
+    transform-origin: 0px 10px;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#IMG_12*/
+
+#IMG_12:after {
+    box-sizing: border-box;
+    min-height: auto;
+    min-width: auto;
+    text-align: center;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#IMG_12:after*/
+
+#IMG_12:before {
+    box-sizing: border-box;
+    min-height: auto;
+    min-width: auto;
+    text-align: center;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#IMG_12:before*/
+
+#DIV_13 {
+    box-sizing: border-box;
+    height: 17px;
+    min-height: auto;
+    min-width: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 538px;
+    perspective-origin: 269px 8.5px;
+    transform-origin: 269px 8.5px;
+    font: normal normal 600 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 2px 0px;
+    overflow: hidden;
+}/*#DIV_13*/
+
+#DIV_13:after {
+    box-sizing: border-box;
+    min-height: auto;
+    min-width: auto;
+    white-space: nowrap;
+    font: normal normal 600 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_13:after*/
+
+#DIV_13:before {
+    box-sizing: border-box;
+    min-height: auto;
+    min-width: auto;
+    white-space: nowrap;
+    font: normal normal 600 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_13:before*/
+
+#DIV_14 {
+    box-sizing: border-box;
+    height: 77px;
+    min-height: auto;
+    min-width: auto;
+    width: 538px;
+    perspective-origin: 269px 38.5px;
+    transform-origin: 269px 38.5px;
+    flex: 1 1 0%;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 2px 0px;
+    overflow: hidden;
+}/*#DIV_14*/
+
+#DIV_14:after {
+    box-sizing: border-box;
+    min-height: auto;
+    min-width: auto;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_14:after*/
+
+#DIV_14:before {
+    box-sizing: border-box;
+    min-height: auto;
+    min-width: auto;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_14:before*/
+
+#DIV_15 {
+    box-sizing: border-box;
+    height: 150px;
+    min-height: auto;
+    min-width: auto;
+    width: 200px;
+    perspective-origin: 100px 75px;
+    transform-origin: 100px 75px;
+    flex: 0 0 auto;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0px 0px 0px 30px;
+    overflow: hidden;
+}/*#DIV_15*/
+
+#DIV_15:after {
+    box-sizing: border-box;
+    min-height: auto;
+    min-width: auto;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_15:after*/
+
+#DIV_15:before {
+    box-sizing: border-box;
+    min-height: auto;
+    min-width: auto;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_15:before*/
+
+#ALGORITHM-KEYWORDS_16 {
+    box-sizing: border-box;
+    display: flex;
+    height: 56px;
+    width: 200px;
+    align-items: flex-start;
+    perspective-origin: 100px 28px;
+    transform-origin: 100px 28px;
+    flex-flow: column nowrap;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#ALGORITHM-KEYWORDS_16*/
+
+#ALGORITHM-KEYWORDS_16:after {
+    box-sizing: border-box;
+    display: block;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#ALGORITHM-KEYWORDS_16:after*/
+
+#ALGORITHM-KEYWORDS_16:before {
+    box-sizing: border-box;
+    display: block;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#ALGORITHM-KEYWORDS_16:before*/
+
+#A_17 {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    display: block;
+    height: 23px;
+    min-height: auto;
+    min-width: auto;
+    text-align: center;
+    text-decoration: none solid rgb(46, 132, 239);
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 139.594px;
+    column-rule-color: rgb(46, 132, 239);
+    perspective-origin: 69.7969px 11.5px;
+    transform-origin: 69.7969px 11.5px;
+    user-select: none;
+    caret-color: rgb(46, 132, 239);
+    border: 1px solid rgb(46, 132, 239);
+    border-radius: 4px 4px 4px 4px;
+    font: normal normal 500 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0px 0px 5px;
+    outline: rgb(46, 132, 239) none 0px;
+    padding: 2px 12px;
+}/*#A_17*/
+
+#A_17:after {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    min-height: auto;
+    min-width: auto;
+    text-align: center;
+    text-decoration: none solid rgb(46, 132, 239);
+    white-space: nowrap;
+    column-rule-color: rgb(46, 132, 239);
+    user-select: none;
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 500 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#A_17:after*/
+
+#A_17:before {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    min-height: auto;
+    min-width: auto;
+    text-align: center;
+    text-decoration: none solid rgb(46, 132, 239);
+    white-space: nowrap;
+    column-rule-color: rgb(46, 132, 239);
+    user-select: none;
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 500 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#A_17:before*/
+
+#SPAN_18 {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    cursor: pointer;
+    display: block;
+    height: 17px;
+    max-width: 170px;
+    text-align: center;
+    text-decoration: none solid rgb(46, 132, 239);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 113.594px;
+    column-rule-color: rgb(46, 132, 239);
+    perspective-origin: 56.7969px 8.5px;
+    transform-origin: 56.7969px 8.5px;
+    user-select: none;
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 500 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+    overflow: hidden;
+}/*#SPAN_18*/
+
+#SPAN_18:after {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none solid rgb(46, 132, 239);
+    white-space: nowrap;
+    column-rule-color: rgb(46, 132, 239);
+    user-select: none;
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 500 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#SPAN_18:after*/
+
+#SPAN_18:before {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none solid rgb(46, 132, 239);
+    white-space: nowrap;
+    column-rule-color: rgb(46, 132, 239);
+    user-select: none;
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 500 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#SPAN_18:before*/
+
+#A_19 {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    display: block;
+    height: 23px;
+    min-height: auto;
+    min-width: auto;
+    text-align: center;
+    text-decoration: none solid rgb(46, 132, 239);
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 106.438px;
+    column-rule-color: rgb(46, 132, 239);
+    perspective-origin: 53.2188px 11.5px;
+    transform-origin: 53.2188px 11.5px;
+    user-select: none;
+    caret-color: rgb(46, 132, 239);
+    border: 1px solid rgb(46, 132, 239);
+    border-radius: 4px 4px 4px 4px;
+    font: normal normal 500 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0px 0px 5px;
+    outline: rgb(46, 132, 239) none 0px;
+    padding: 2px 12px;
+}/*#A_19*/
+
+#A_19:after {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    min-height: auto;
+    min-width: auto;
+    text-align: center;
+    text-decoration: none solid rgb(46, 132, 239);
+    white-space: nowrap;
+    column-rule-color: rgb(46, 132, 239);
+    user-select: none;
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 500 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#A_19:after*/
+
+#A_19:before {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    min-height: auto;
+    min-width: auto;
+    text-align: center;
+    text-decoration: none solid rgb(46, 132, 239);
+    white-space: nowrap;
+    column-rule-color: rgb(46, 132, 239);
+    user-select: none;
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 500 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#A_19:before*/
+
+#SPAN_20 {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    cursor: pointer;
+    display: block;
+    height: 17px;
+    max-width: 170px;
+    text-align: center;
+    text-decoration: none solid rgb(46, 132, 239);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80.4375px;
+    column-rule-color: rgb(46, 132, 239);
+    perspective-origin: 40.2188px 8.5px;
+    transform-origin: 40.2188px 8.5px;
+    user-select: none;
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 500 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+    overflow: hidden;
+}/*#SPAN_20*/
+
+#SPAN_20:after {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none solid rgb(46, 132, 239);
+    white-space: nowrap;
+    column-rule-color: rgb(46, 132, 239);
+    user-select: none;
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 500 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#SPAN_20:after*/
+
+#SPAN_20:before {
+    box-sizing: border-box;
+    color: rgb(46, 132, 239);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none solid rgb(46, 132, 239);
+    white-space: nowrap;
+    column-rule-color: rgb(46, 132, 239);
+    user-select: none;
+    caret-color: rgb(46, 132, 239);
+    border: 0px none rgb(46, 132, 239);
+    font: normal normal 500 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: rgb(46, 132, 239) none 0px;
+}/*#SPAN_20:before*/
+
+#DIV_21 {
+    box-sizing: border-box;
+    display: none;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_21*/
+
+#DIV_21:after {
+    box-sizing: border-box;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_21:after*/
+
+#DIV_21:before {
+    box-sizing: border-box;
+    font: normal normal 400 normal 12px / 17.1429px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}/*#DIV_21:before*/
+
