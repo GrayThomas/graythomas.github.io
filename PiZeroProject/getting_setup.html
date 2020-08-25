@@ -1,0 +1,314 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
+<html>
+<head>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass|Yantramanav:900">
+  <link rel="stylesheet" href="../stylesheets/sage.css" media="screen">
+
+
+<script type="text/javascript">
+</script>
+<title>Gray Cortright Thomas</title>
+<meta name="description" content="Robotics Researcher, NASA Space Technology Fellow, and Graduate Student at the University of Texas at Austin">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <!-- <h1 class="title">Raspberry Pi Zero for Science!</h1> -->
+      <h1 class="title">Outreach</h1> 
+    </header>
+    
+    <div id="container">
+
+      <h1 class="ctagline" color=#ccc>Raspberry Pi Zero for Science!</h1>
+      <div id="main" role="main">
+        <div class="download-bar">
+          <div class="inner">
+            <a href="index.html" class="gray">
+              Gray Thomas
+            </a>
+            <a href="https://github.com/GrayThomas/pi_zero_for_science" class="code">
+              PiZero Code Repository
+            </a>
+          <!-- <a href="http://www.me.utexas.edu/faculty/faculty-directory/sentis" class="sentis">
+          Luis Sentis
+        </a> -->
+      </div>
+      <span class="blc"></span><span class="trc"></span>
+    </div>
+
+    <article class="markdown-body">
+      
+     <h3>Welcome, young Pi-dawans</h3>
+     <h3>Getting started with the Neurobionics Pi Zero Science Kit</h3>
+     <img src="photos/kit.png" width="650">
+      <p>
+        Your kit should include
+        <ul>
+          <li>Raspberry Pi Zero W Basic Kit</li>
+            <ul>
+              <li>Raspbery Pi Zero W board</li>
+              <li>USB charging cable</li>
+              <li>USB adapter cable</li>
+              <li>Video adapter cable</li>
+              <li>Memory card pre-programmed with Neurobionics Outreach Image</li>
+            </ul>
+          <li><a href="https://learn.adafruit.com/msa301-triple-axis-accelerometer/pinouts">MSA301 Tripple Axis Accelerometer</a></li>
+          <li><a href="https://shop.pimoroni.com/products/led-shim">LED Shim from Pimoroni Ltd</a></li>
+          <li><a href="https://github.com/adafruit/Adafruit-Perma-Proto-Bonnet-PCB">Adafruit Perma Proto Bonnet Mini</a></li>
+        </ul>
+      </p>
+
+
+      <h3>Soldering the Hardware</h3>
+      <p>
+        A detailed pinout for the raspberry pi device can be found at <a href="https://pinout.xyz/">pinout.xyz</a>.
+
+        The led shim comes with a <a href="https://github.com/pimoroni/led-shim">python library</a>.
+
+        Like other hardware devices from adafruit and the greater raspberry pi community, these links can be found easily with a bit of googling.
+
+      </p>
+      <img src="photos/solder_layout.png" width="650">
+      <center><img src="photos/solder_victory.png" width="300"></center>
+
+    <!-- <img src="photos/kit.png" width="650"> -->
+      <p>
+        
+      </p>
+
+      <h3>Setting up the the LED shim</h3>
+      <p>
+      	Our first order of business is to download the libraries for running the Pimoroni LED shim. They provide a web-service where users can access a helpful installation script (which you can download at <a href="https://get.pimoroni.com/ledshim">https://get.pimoroni.com/ledshim</a>). This script is pretty long and complex, but all we need to do is download and run it. Since the Pi is a GNU/Linux system, we can use the "curl" command to download files and then "pipe" ('|') the file to our interpreter ("bash"). (This is a handy way of setting up installation in user-friendly projects, but do beware that there are no security features for curl piped to bash. It relies on your trust of the website not to host a malicious script.) 
+      </p>
+
+      <p class="code">pi@raspberrypi:~ $ curl https://get.pimoroni.com/ledshim | bash<br>
+      	[...]<br>
+      	This script will install everything needed to use <br>
+		LED SHIM<br>
+		<br>
+		Always be careful when running scripts and commands copied<br>
+		from the internet. Ensure they are from a trusted source.<br>
+
+		[...]<br>
+      Do you wish to continue? [y/N] y<br>
+      [...]<br>
+      Do you wish to perform a full install? [y/N] y<br>
+  		</p>
+
+      <p>
+      	This script, from the manufcturer of the LED shim, will enable the i2c protocol (which may not be enabled by default on the image) and download and install the necessary python packages to use the LED shim.
+      </p>
+      <p>
+      	That's it for installing the LED shim libraries! Now it should be availiable through importing "ledshim". Check out the library's documentation at <a href="http://docs.pimoroni.com/ledshim/">http://docs.pimoroni.com/ledshim/</a>.
+      </p>
+
+      <h4>LED shim demo</h4>
+      <p>
+      	Here's a simple example program from the <a href="https://github.com/pimoroni/led-shim">Pimoroni git repository</a>. It makes the device "glitter" in the sense that all the 28 pixels randomly change color every 0.05 seconds.
+      </p>
+
+		<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.0em .0em .0em .0em;padding:.0em .0em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">import</span> <span style="color: #f8f8f2">random</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">time</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">ledshim</span>
+
+<span style="color: #f8f8f2">ledshim</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">set_clear_on_exit()</span>
+<span style="color: #f8f8f2">ledshim</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">set_brightness(</span><span style="color: #ae81ff">0.4</span><span style="color: #f8f8f2">)</span>
+
+<span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">True:</span>
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(ledshim</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">NUM_PIXELS):</span>
+        <span style="color: #f8f8f2">ledshim</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">set_pixel(i,</span> 
+            <span style="color: #f8f8f2">random</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">randint(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">255</span><span style="color: #f8f8f2">),</span> 
+            <span style="color: #f8f8f2">random</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">randint(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">255</span><span style="color: #f8f8f2">),</span> 
+            <span style="color: #f8f8f2">random</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">randint(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">255</span><span style="color: #f8f8f2">))</span>
+
+    <span style="color: #f8f8f2">ledshim</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">show()</span>
+    <span style="color: #f8f8f2">time</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sleep(</span><span style="color: #ae81ff">0.05</span><span style="color: #f8f8f2">)</span>
+</pre></div>
+
+	<p>
+		To get this demo onto your Pi, there are several options. If you like playing on hard mode, you can type the program into the Pi using "nano", the no-frills text editor you used to set up the wifi connections if you followed the <a href="https://opensourceleg.com/initial-setup-of-microcomputer-new/#addnetwork">instructions on OSL website</a>. Easier methods include (1) finding the <a href="https://github.com/pimoroni/led-shim/blob/master/examples/random_blink_colours.py">git repository</a> and using git to download the file (it's in the examples folder), (2) copy-pasting the code from this website to a new file on your actual computer, and then sending that file onto the pi using a ssh tool like <a href="https://www.putty.org/">PuTTY</a>, and, if your native computer happens to be linux or mac, (3) setting up a mapped directory in your actual computer using <a href="https://linuxize.com/post/how-to-use-sshfs-to-mount-remote-directories-over-ssh/#:~:text=Share%3A,default%20on%20most%20SSH%20servers.">sshfs</a>, so you can edit the files on your Pi like the Pi was just some special folder on your host computer.
+	</p>
+
+	<p>Once we ssh into the pi, we're in the home directory for the pi user:</p>
+      <p class="code">pi@raspberrypi:~ $ ls<br>
+      2020-03-10-125103_3840x2160_scrot.png  code  Desktop  startup
+      </p>
+      <p>First, we're going to make a new directory for our main code workspace, or wk for short: </p>
+      <p class="code">
+        pi@raspberrypi:~ $ mkdir wk<br>
+        pi@raspberrypi:~ $ ls<br>
+        2020-03-10-125103_3840x2160_scrot.png  code  Desktop  startup  wk
+      </p>
+      <p>Then, we'll move into that directory and get our code in there one way or another.</p>
+      <p class="code">
+        pi@raspberrypi:~ $ cd wk<br>
+        pi@raspberrypi:~/wk $ nano led_shim_demo.py
+      </p>
+      <p> If you used nano, remember that you'll need to use ctrl-s to save and ctrl-x to quit. <a href="https://en.wikipedia.org/wiki/GNU_nano">Nano</a> emulates the <a href="https://en.wikipedia.org/wiki/Pico_(text_editor)">Pico text editor</a> which is from 1989.</p>
+
+	<p>
+		Once this code is on your Pi, run it by calling python3
+	</p>
+	<p class="code">
+		pi@raspberrypi:~/wk $ python3 led_shim_demo.py
+	</p>
+	<p>
+		And enjoy your glittering electronic device! To stop, press ctrl-c.
+	</p>
+
+
+
+
+	<h3> Setting up the MSA301 accelerometer
+	</h3>
+
+     <p>
+      Next, we need to get library for the MSA301 accelerometer chip. Thanks to the previous step, I2C communication is already enabled for the Pi, so we just need to install this library using pip3, and test it out. For the accelerometer, we will use the <a href="https://github.com/adafruit/Adafruit_CircuitPython_MSA301">Adafruit_CircuitPython_MSA301</a> library.
+    </p>
+     <p class="code">pi@raspberrypi:~/wk $ pip3 install adafruit-circuitpython-msa301
+     </p>
+
+      <p>(There will be several lines of text after you type this command, which describe all the dependent libraries you are also installing in order to make the msa301 library work.)</p> 
+
+      <p> to test this library, we'll use a program (msa301_simpletest.py) from the examples folder from Adafruit's <a href="https://github.com/adafruit/Adafruit_CircuitPython_MSA301/blob/master/examples/msa301_simpletest.py">git repository</a>:</p>
+      
+        <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.0em .0em .0em .0em;padding:.0em .0em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">import</span> <span style="color: #f8f8f2">time</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">board</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">busio</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">adafruit_msa301</span>
+
+<span style="color: #f8f8f2">i2c</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">busio</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">I2C(board</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">SCL,</span> <span style="color: #f8f8f2">board</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">SDA)</span>
+
+<span style="color: #f8f8f2">msa</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">adafruit_msa301</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">MSA301(i2c)</span>
+<span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">True:</span>
+    <span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;%f %f %f&quot;</span> <span style="color: #f92672">%</span> <span style="color: #f8f8f2">msa</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">acceleration)</span>
+    <span style="color: #f8f8f2">time</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sleep(</span><span style="color: #ae81ff">0.5</span><span style="color: #f8f8f2">)</span>
+</pre></div>
+
+<p>Like the other demo program, there are several ways to get this file onto the Pi. Again we'll run it using python3
+</p>
+
+	<p class="code">
+		pi@raspberrypi:~/wk $ python3 msa301_simpletest.py
+	</p>
+	<p>
+		When it runs, it should print out the accelerometer raw readings to your screen. They are in meters per second by default. On the top of the accelerometer chip, there is a little decal showing which way the x-y-z axes are pointing. You may notice that, even when it's not moving it detects acceleration! Moreover, this acceleration is upwards!? This is because the accelerometer detects acceleration relative to an inertial reference frame, and thanks to gravity, this inertial reference frame is being sucked into the center of the planet at a constant acceleration. When the device is not moving on the surface of the planet, it's because we're accelerating it upwards to counteract it's natural acceleration downawards. If the accelerometer were in freefall or in an earth orbit, it would read zero-acceleration! As before, to stop, press ctrl-c.
+	</p>
+
+<h3> The Jump Detector Program</h3>
+
+<p>Now that we have these two pices of hardware, we can build a simple wearable robotics demo that involves sensing, thinking, and acting. The idea is to build a jump detector, a program that (1) uses the accelerometer to detect when the person is in free-fall (i.e. jumping!), (2) times how long the person is in the air, (3) uses some simple ballistic math to figure out how high they must have jumped, and (4) visualizes that answer using the Pimoroni LED shim's 1x28 pixel display.</p>
+
+
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.0em .0em .0em .0em;padding:.0em .0em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">import</span> <span style="color: #f8f8f2">random</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">ledshim</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">time</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">board</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">busio</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">adafruit_msa301</span>
+
+<span style="color: #f8f8f2">i2c</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">busio</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">I2C(board</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">SCL,</span> <span style="color: #f8f8f2">board</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">SDA)</span>
+
+<span style="color: #f8f8f2">msa</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">adafruit_msa301</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">MSA301(i2c)</span>
+
+<span style="color: #f8f8f2">ledshim</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">set_clear_on_exit()</span>
+<span style="color: #f8f8f2">ledshim</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">set_brightness(</span><span style="color: #ae81ff">0.4</span><span style="color: #f8f8f2">)</span>
+
+<span style="color: #f8f8f2">is_jumping</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">False</span>
+<span style="color: #f8f8f2">jump_time</span><span style="color: #f92672">=</span><span style="color: #ae81ff">0.0</span>
+<span style="color: #f8f8f2">loop_period</span><span style="color: #f92672">=</span><span style="color: #ae81ff">0.05</span> <span style="color: #75715e"># seconds</span>
+<span style="color: #f8f8f2">last_jump_height</span><span style="color: #f92672">=</span><span style="color: #ae81ff">0.0</span>
+<span style="color: #f8f8f2">next_iter</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">time</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">time()</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">loop_period</span>
+
+<span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">True:</span>
+    <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">time</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">time()</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">next_iter:</span>
+        <span style="color: #f8f8f2">time</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sleep(</span><span style="color: #ae81ff">0.00</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">next_iter</span><span style="color: #f92672">+=</span><span style="color: #f8f8f2">loop_period</span>
+
+    <span style="color: #f8f8f2">x,</span> <span style="color: #f8f8f2">y,</span> <span style="color: #f8f8f2">z</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">msa</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">acceleration</span>
+    <span style="color: #75715e"># print(&quot;%f %f %f&quot; % msa.acceleration)</span>
+
+    <span style="color: #75715e"># acceleration squared &lt; threshold squared</span>
+    <span style="color: #f8f8f2">is_freefall</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">x</span><span style="color: #f92672">**</span><span style="color: #ae81ff">2</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">y</span><span style="color: #f92672">**</span><span style="color: #ae81ff">2</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">z</span><span style="color: #f92672">**</span><span style="color: #ae81ff">2</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">40</span>
+
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">is_freefall:</span> 
+        <span style="color: #75715e"># if we&#39;re in freefall, then we&#39;re jumping!</span>
+        <span style="color: #75715e"># print(&quot;jumping!&quot;)</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f92672">not</span> <span style="color: #f8f8f2">is_jumping:</span> 
+            <span style="color: #75715e"># the jump must have just started</span>
+            <span style="color: #f8f8f2">is_jumping</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">True</span>
+            <span style="color: #f8f8f2">jump_time</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.0</span>
+        <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #75715e"># the jump must be continuing</span>
+            <span style="color: #f8f8f2">jump_time</span><span style="color: #f92672">+=</span><span style="color: #f8f8f2">loop_period</span>
+    <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span> 
+        <span style="color: #75715e"># no freefall == not jumping!</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">is_jumping:</span> 
+            <span style="color: #75715e"># the jump must have just ended</span>
+            <span style="color: #f8f8f2">is_jumping</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">False</span>
+    <span style="color: #75715e"># simple ballistics</span>
+    <span style="color: #f8f8f2">last_jump_height</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">9.81</span> <span style="color: #f92672">*</span> <span style="color: #f92672">.</span><span style="color: #ae81ff">5</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">(jump_time</span><span style="color: #f92672">/</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">**</span><span style="color: #ae81ff">2</span>        
+
+
+    <span style="color: #75715e"># a bar glitters. It&#39;s size is proportional to the jump height</span>
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">range(ledshim</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">NUM_PIXELS):</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">&lt;=</span> <span style="color: #f8f8f2">last_jump_height</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #75715e"># glitter mode</span>
+            <span style="color: #f8f8f2">ledshim</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">set_pixel(i,</span>
+                <span style="color: #f8f8f2">random</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">randint(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">255</span><span style="color: #f8f8f2">),</span>
+                <span style="color: #f8f8f2">random</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">randint(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">255</span><span style="color: #f8f8f2">),</span>
+                <span style="color: #f8f8f2">random</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">randint(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">255</span><span style="color: #f8f8f2">))</span>
+        <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #75715e"># off mode</span>
+            <span style="color: #f8f8f2">ledshim</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">set_pixel(i,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">ledshim</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">show()</span>
+</pre></div>
+
+<p>To explain this program, we first set up the "msa" object and the "ledshim" library state as in the previous two demos. Then we define the program's memory variables in their initial conditions (is_jumping, jump_time, loop_period, last_jump_height, next_iter). The subsequent "while True" begins a loop that goes forever (or until we press ctrl-c). The next "while" loop is known as a "busy wait loop", and waits for the next iteration to start by checking over and over to see if it is the right time yet. Next, we measure the accelerometer values, and compare them to a threshold to determine if the device is in freefall. Because the sensor is noisy, this threshold needs to be pretty big to detect freefall reliably. But it definitely needs to be below 96.24 m^2/s^4, or it will detect free-fall even when the device is stationary!
+</p>
+<p>
+	Next, we need to enter into some conditional logic to determine if we are starting to jump, finishing a jump, continuting a jump, or continuing to not be jumping. This part is explained in the code comments. After we're done with the conditional logic, we apply simple ballistics to map from jump_time to last_jump_height. These ballistics should seem pretty familiar: we're looking point mass being acted on by gravity as it flies in a parbolic arc. If the total time is jump_time, then the time between the apex of the parabola and the crash landing is jump_time/2. This means that the mass, which has zero downward velocity at the apex, is acted on by 9.81 m/s/s for jump_time/2 seconds before landing. 
+</p>
+
+<p>
+	With this estimate of the height, the code provides a visualization by modifying the glittering demo so that only part of the 28 pixel bar glitters. How much of the bar glitters is based on last_jump_height*100, so we get 1 pixel for each centimeter of jump height.
+</p>
+
+<p>
+When it's all done, you should see a demo like in the following video! In the spirit of wearable robotics, I've made a simple belt-attachment using some masking tape and balsa wood.
+</p>
+
+<iframe width="635" height="419" src="https://www.youtube.com/embed/BhQ_tLw6O4Y?rel=0" frameborder="0" allow="accelerometer; encrypted-media; autoplay; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <!-- <img src="photos/gray_val.png" width="650"> -->
+
+   </article>
+ </div>
+   
+<!-- </div> 
+<footer>
+  <div class="owner">
+
+    <p><a href="https://github.com/GrayThomas" class="avatar"><img src="https://avatars2.githubusercontent.com/u/4873017?v=3&amp;s=60" width="48" height="48"></a>View <a href="https://github.com/GrayThomas">GrayThomas</a> on <a href="https://www.github.com">GitHub</a></p>
+
+  </div>
+  <div class="creds">
+    <small>This page based on a <a href="https://pages.github.com/">GitHub Pages</a>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+  </div>
+</footer>
+</div> -->
+
+
+</body>
+</html>
