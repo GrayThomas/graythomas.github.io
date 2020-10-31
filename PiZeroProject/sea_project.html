@@ -1,0 +1,78 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
+<html>
+<head>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass|Yantramanav:900">
+  <link rel="stylesheet" href="../stylesheets/sage.css" media="screen">
+
+
+<script type="text/javascript">
+</script>
+<title>Gray Cortright Thomas</title>
+<meta name="description" content="Robotics Researcher">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">SEA Project</h1> 
+    </header>
+    
+    <div id="container">
+
+      <div id="main" role="main">
+        <div class="download-bar">
+          <div class="inner">
+            <a href="index.html" class="gray">
+              Gray Thomas
+            </a>
+
+      </div>
+      <span class="blc"></span><span class="trc"></span>
+    </div>
+
+    <article class="markdown-body">
+    <img src="SEA_design.png" width="650">
+    <h3>Adjustable-Stiffness Non-Linear Spring Testbed</h3>  
+    <p>
+      Given the nature of our theory's claims, a proper validation experiment requires a testing apparatus that can track position/torque trajectories with adjustable, non-linear springs. Our approach extends the <a href="https://opensourceleg.com/">Open Source Leg's</a> Selectable Series-Elasticity design, which mates an involute gear-shaft to a collection of spring disks. Each spring disk features an array of inward-pointing flexible beams that engage with the gear teeth to act as a (nearly linear) rotary spring. The amount of series elasticity can be selected by adding or removing spring disks. Our extension aims to re-design the spring disks to allow selection of non-linear spring behaviors. This is based on two competing effects: when a beam rolls up on the tip of a tooth, the contact force vector tilts towards the radial direction---producing a softening-type nonlinearity; when a beam is initially disengaged from a tooth, the angle where the beam first engages with the tooth marks an abrupt increase in stiffness---a stiffening-type nonlinearity. 
+    </p>
+
+    <img src="DOB_diagram.png" width="650">
+    <h3>Spring Design for Disturbance-Observer Feedback</h3>
+    <p>
+      Our spring design framework also extends to springs that serve a torque-measurement purpose in a feedback controller designed to hide the effects of transmission friction in prosthetic legs.
+      This transmission friction is problematic because it prevents a person wearing the powered prosthetic leg from swinging the leg forward under natural pendulum dynamics as they typically do with a passive prosthesis.
+      But thanks to the spring's ability to measure the output torque, we can use a disturbance estimator---a specialized type of linear feedback controller---to measure and directly compensate for the nonlinear friction effects in the transmission.
+      The performance we can expect using this strategy ties back to the design of the spring profile because the measurement noise in the deflection sensing is related to torque noise by the marginal spring rate at any particular deflection.
+      Using our optimization methods, we can design springs that optimally trade off the goals of disturbance rejection and energy savings while guarnteeing robust satisfaction of constraints over a range of activities of daily living.
+      In particular, we hope to exploit stiffening nonlinearity in the spring to attain high torque fidelity at low torques while still satisfying absolute deflection limits at high torques and remaining close to the energy-optimal performance.
+    </p>
+
+   </article>
+ </div>
+   
+<!-- </div> 
+<footer>
+  <div class="owner">
+
+    <p><a href="https://github.com/GrayThomas" class="avatar"><img src="https://avatars2.githubusercontent.com/u/4873017?v=3&amp;s=60" width="48" height="48"></a>View <a href="https://github.com/GrayThomas">GrayThomas</a> on <a href="https://www.github.com">GitHub</a></p>
+
+  </div>
+  <div class="creds">
+    <small>This page based on a <a href="https://pages.github.com/">GitHub Pages</a>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+  </div>
+</footer>
+</div> -->
+
+
+</body>
+</html>
