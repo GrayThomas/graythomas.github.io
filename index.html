@@ -50,7 +50,7 @@
     </div>
     <div>
       <img style="float: left; max-width:100%; padding-right: 10px" height="200" src="images/Gray300dpi.png"> 
-      <img style="float: right; max-width:100%; padding-left: 10px" height="200" src="images/HCFS-300dpi.png">
+      <img style="float: right; max-width:100%; padding-left: 10px; padding-bottom: 10px; padding-top: 10px" height="180" src="images/HCFS-300dpi.png">
       <span>
         <img style="vertical-align:top; padding-left: 00px; padding-top: 10px; padding-right: 00px; max-width:100%; padding-bottom: 10px" width="500" src="images/UMEECS-300dpi.png">
         <p class="affiliation">Postdoctoral Research Fellow<br><a href="https://web.eecs.umich.edu/locolab/team.html">Locomotor Control Systems</a><br>and <a href="https://neurobionics.robotics.umich.edu/">Neurobionics Laboratories</a><br>gcthomas{at}umich.edu</p>
@@ -60,191 +60,26 @@
     <article class="markdown-body">
       <h1>Research Projects</h1>
       <p style="text-align:justify; text-justify:inter-word">
-        <a href="foo"><img width="350" src=images/example-project-300dpi.png></a>
-        <a href="foo"><img width="350" src=images/example-project-300dpi.png></a>
-        <a href="foo"><img width="350" src=images/example-project-300dpi.png></a>
-        <a href="foo"><img width="350" src=images/example-project-300dpi.png></a>
-        <a href="foo"><img width="350" src=images/example-project-300dpi.png></a>
-        <a href="foo"><img width="350" src=images/example-project-300dpi.png></a>
-        <a href="foo"><img width="350" src=images/example-project-300dpi.png></a>
-        <a href="foo"><img width="350" src=images/example-project-300dpi.png></a>
+        <img width="350" src=images/GProject/GProject-AES.png>
+        <img width="350" src=images/GProject/GProject-NL-Springs.png>
+        <a href="Preprints/ThomasEA2021TROpre.pdf"><img width="350" src=images/GProject/GProject-Sagit.png></a>
+        <img width="350" src=images/GProject/GProject-TIPO.png>
+        <a href="https://ieeexplore.ieee.org/document/8636188"><img width="350" src=images/GProject/GProject-QIP.png></a>
+        <a href="Preprints/BrissonneauHeThomasSentis2020LCSSpre.pdf"><img width="350" src=images/GProject/GProject-PHD.png></a>
+        <a href="Preprints/MedranoRouseThomas2020TMRBpre.pdf"><img width="350" src=images/GProject/GProject-JLR.png></a>
+        <a href="Preprints/ThomasMehlingHolleySentis2020TMechpre.pdf"><img width="350" src=images/GProject/GProject-FSF-SEA.png></a>
+        <a href="https://ieeexplore.ieee.org/document/8868484"><img width="350" src=images/GProject/GProject-SAECC.png></a>
+        <a href="http://ieeexplore.ieee.org/abstract/document/7736085/"><img width="350" src=images/GProject/GProject-HUME.png></a>
+        <a href="http://www.worldscientific.com/doi/abs/10.1142/S0219843616500079"><img width="350" src=images/GProject/GProject-VRC.png></a>
+        <a href="https://ieeexplore.ieee.org/document/9224374"><img width="350" src=images/GProject/GProject-JND.png></a>
+        <img width="350" src=images/GProject/G-BLANK.png>
+        <img width="350" src=images/GProject/G-BLANK.png>
+        <img width="350" src=images/GProject/G-BLANK.png>
+        <img width="350" src=images/GProject/G-BLANK.png>
+        <img width="350" src=images/GProject/G-BLANK.png>
+        <img width="350" src=images/GProject/G-BLANK.png>
+        <img width="350" src=images/GProject/G-BLANK.png>
       </p>
-
-
-
-      <!-- <div class="rmodule">
-        <img src="images/tuv.png" width="250"><br>
-        <img src="images/val.png" height="250"><br>
-      </div> -->
-      <ul>
-        <li><a href="#SEAEnergy">Designing Optimal Joint Springs for Energy Efficient Prosthetics</a></li>
-        <li><a href="#Sagit">Force-Feedback Control of a Lower-Body Exoskeleton</a></li>
-        <li><a href="#SEA">Impedance Limits for Series Elastic Actuators</a></li>
-        <li><a href="#Rao">Passivity Limits for Tendon-Driven Robotic Hand Control (Award Winner!)</a></li>
-        <li><a href="#Exo">High Performance Force Control for Series Elastic Amplification Exoskeletons</a></li>
-        <li><a href="#ID">Robust ℋ∞ Model-Set Identification</a></li>
-        <li><a href="#Safe">Barrier Pairs and Safety Controllers</a></li>
-        <li><a href="#ILP">Using Series Springs to Exceed Motor Velocity Limits</a></li>
-        <li><a href="#MC">Computationally Efficient Multi-Contact Locomotion Planning</a></li>
-        <li><a href="#Hume">Award Finalist: Point Foot Biped Robot Hume Team!</a></li>
-        <li><a href="#IHMC">DARPA VRC Winner: IJHR Paper Award Winner: Team IHMC!</a></li>
-      </ul>
-
-      <a name="SEA"></a>
-      <h3>
-        High Performance Control of Series Elastic Robots
-      </h3>
-      <p>
-        For robots with series elastic actuators (SEAs) feedback controllers are often designed to be energetically passive as a conservative heuristic for stability. To go beyond this performance limit is possible, but requires knowledge of the environment. If perfect knowledge is available then the SEA-environment system can have very high performance position control <a href="http://dynamicsystems.asmedigitalcollection.asme.org/article.aspx?articleid=2702914">[JDSMC 2018]</a>, but this isn't a realistic scenario most of the time. Recently, I've been working on a system of gain assignment to position, velocity, spring-deflection, and spring-deflection-rate controllers using frequency domain compliance plots (as shown below) to visualize controller design as shaping the compliance of the actuator, such that it isn't quite passive but is close enough not to be destabilized by common environments. My tests in the summer of 2018 demonstrated stiffer-than passive control on one of the NASA Valkyrie actuators (writeup in progress).
-        <img src="images/compliance_shaping.png">
-      </p>
-
-
-
-      <a name="Exo"></a>
-      <h3>
-      Series Elastic Amplification Exoskeletons
-      </h3>
-      <p><img src="images/binghan_exo.png">
-      Amplification exoskeletons are designed to extend the capabilities of the human operator by amplifying their interaction forces with the world. Using force sensorized attachments between the human and the exoskeleton, this research studies the limitations of controllers which make the human feel stronger relative to the environment by amplifying the human's interaction forces. One important part of this research is understanding the behavior of the human operator when they are wearing an exoskeleton, since their unintentional changes to joint stiffness have a big influence on amplification performance <a href="https://arxiv.org/abs/1809.10560">[ArXiV]</a>. This research, which is done in collaboration with Binghan He, Nicolas Brissoneau, Luis Sentis, and <a href="https://apptronik.com/">Apptronik Systems</a>, is currently scaling up to whole lower-body exoskeletons with contact constraints. I am also exploring the potential of soft cuffs to change the upper performance limitations along with UT undergraduate <a href="https://www.linkedin.com/in/jeremiah-coholich/">Jeremiah Coholich</a>: <img src="images/jeremiah_exo.jpg">
-      </p>
-
-
-      <a name="ID"></a>
-      <h3>
-        Robust ℋ∞ Model-Set Identification 
-      </h3>
-      <p>
-        All control design problems are limited at high frequencies — roll-off constraints, passivity requirements, robust internal stability, cost function penalties on input, and margin requirements all methods for incorporating this reality into a design problem. These constraints all work against performance, so less conservative constraints are better. I've come to respect the philosophy that robust internal stability is the most fundamental of these limits. And since robust internal stability is based on a model-set description of the plant, I've designed an identification procedure which attempts to directly learn model-sets, specifically the additive uncertainty model-set from traditional ℋ∞ robust control theory, from frequency domain input-output measurements <a href="http://walk-man.eu/results/workshops/iros-2016-workshop-force-torque-controlled-actuation/submitted-contribution/57-submission-by-gray-thomas/file"><b>[IROS 2016 WS]</b></a>.  The approach is parallel to other methods of system identification (prediction error, FFT-based, iterative identification for control) due to different assumptions on the nature of the identification experiment <a href="Preprints/ThomasSentis2017ACC.pdf"><b>[ACC 2017]</b></a>. It also benefits from a convex formulation which represents the model-set geometrically as a high dimensional generalization of a cone, a degenerate quadric, which makes the identification problem tractable. In our recently accepted paper <a href="https://arxiv.org/abs/1802.07695">[TAC 2019]</a> we provide an introduction to this "Quadric Inclusion Program" as well as an example which uses a set of orthonormal basis functions to learn a minimal uncertain model for the following frequency domain data
-        <img src="images/qip_example.png" height="250">
-        In this figure, I've plotted the frequency response of the uncertain SEA-like mechanical system shown in part c. Due to some nonlinear friction, the device does not have a consistent bode plot as the amplitude changes, and this is modeled by the three separate black lines in the main figure a. Using a combination of the orthonormal basis functions shown in part d, the quadric inclusion program (QIP) learns the uncertain model represented by the red shaded region. Essentially, QIP fits a model by squeezing the uncertainty up against the worst outlier data---shifting both the frequency domain weighting on the uncertainty and the nominal model to accomplish this aim. I aim to build on this theory until it is practically applicable to the problem of identification and synthesis for high performance series elastic robots and exoskeletons, though it certainly won't be limited to that use case. 
-      </p>
-
-      <div id="DIV_1">
-  <a href="https://codeocean.com/capsule/7861079/tree" id="A_2">
-  <div id="DIV_3">
-    <img src="https://codeocean.com/codeocean-public/algorithm/main-image/bb3ad3dc-70a3-4530-a65f-dad462f96420/1549360087" id="IMG_4" alt='' />
-  </div></a>
-  <div id="DIV_5">
-    <div id="DIV_6">
-      <!---->
-<a href="https://codeocean.com/explore/capsules/?query=field%3Aengineering" id="A_7">ENGINEERING</a>
-      <!---->
-<span id="SPAN_8">February 5, 2019</span>
-    </div>
-    <div id="DIV_9">
-      <a href="https://codeocean.com/capsule/7861079/tree" id="A_10">Code for: Quadric Inclusion Programs: an LMI Approach to H[infinity]-Model Identification</a> <span id="SPAN_11"><img id="IMG_12" alt='' /></span>
-    </div>
-    <div id="DIV_13">
-      Gray Cortright Thomas, Luis Sentis
-    </div>
-    <div id="DIV_14">
-      Demonstration of Quadric Inclusion Programming (QIP) for system identification using noisy frequency domain input output phasor measurements of an uncertain or under-modeled system.
-    </div>
-    <!---->
-
-  </div>
-  <div id="DIV_15">
-    <algorithm id="ALGORITHM-KEYWORDS_16">
-      <!---->
- <a href="https://codeocean.com/explore/capsules/?query=tag%3Asystem-identificaton" id="A_17"> <span id="SPAN_18">system-identificaton</span></a>
-      <!---->
- <a href="https://codeocean.com/explore/capsules/?query=tag%3Arobust-control" id="A_19"> <span id="SPAN_20">robust-control</span></a>
-      <!---->
-
-    </algorithm>
-    <div id="DIV_21">
-      ...
-    </div>
-  </div>
-</div>
-
-<!--         <script src="https://codeocean.com/widget.js?id=bb3ad3dc-70a3-4530-a65f-dad462f96420" async></script> -->
-
-<!--       <a name="USF"></a>
-      <h3>
-        Uncertain State Feedback 
-      </h3>
-      <p> One famously difficult problem in control theory is the optimal synthesis of static output feedback controllers. This problem is known to be NP-hard, which is unfortunate, since this problem is equivalent to optimally tuning PID controllers, state feedback controllers based on fixed state estimators, and low-order controller design in general. In this line of research, I'm pursuing a problem which is somewhere in between the convex full state feedback synthesis problem and the NP-hard static output feedback problem: uncertain state feedback. The uncertain state feedback problem is a special case of the static output feedback problem in which the output is an imperfect measurement of the full state. This is a complication relative to full state feedback, which assumes non-uncertain state feedback. The LMI synthesis problem from full state feedback synthesis becomes non-linear, but still permits a Q, Y change of variables, unlike the equivalent BMI from SOF.
-      </p> -->
-
-      
-      <a name="Rao"></a>
-      <h3>
-        Stability of Elastic-Tendon-Driven Robotic Hands
-      </h3>
-      <p>
-        Fellow graduate student <a href="https://www.linkedin.com/in/raobotics">Prashant Rao</a> of the <a href="http://www.me.utexas.edu/~reneu/">ReNeu</a> lab and I explained the stiffness limits for robotic hands driven by series-elastic tendons, using a passivity framework. This research started with Prashant, but I was able to help put his ideas into a rigorous mathematical proof by introducing the passivity framework, segregating linear sub-spaces of motion and force, and ultimately re-deriving his empirical positive definiteness condition under those assumptions. Prashant gave a great presentation at ICRA 2017 in Singapore, featuring many of his latest demo-videos and results on Cartesian stiffness, and we landed the best manipulation paper award <a href="Preprints/RaoThomasSentisDeshpande2017ICRA.pdf"><b>[ICRA 2017]</b></a>!
-        <img src="images/prashant_award.jpg">
-      </p>
-
-
-      <a name="Safe"></a>
-      <h3>
-        Barrier Pairs and Safety Controllers
-      </h3>
-      <p>  When hardware inputs are provided by untrusted sources, how can we guarantee the hardware will satisfy safety constraints? To answer this question I have, along with Binghan He, devised a backup safety controller which uses a minimum over quadratic Lyapunov functions to determine when to switch to backup safety mode, and which control law to apply when it does so. <a href="https://ieeexplore.ieee.org/document/8431457">[ACC 2018]</a> We are also working on a proposal to allow these safety controller to pair up with adaptive controllers for amplification exoskeletons, to offer both the improved performance of adaptive control, with the safety guarantees necessary to work with human operators.
-      <img src="images/safety_control.png">
-      </p>
-
-      <a name="ILP"></a>
-      <h3>
-        Trajectory Optimization for Series Elastic Robots
-      </h3>
-      <p>  Series elastic robots typically have fairly linear actuator dynamics compared to their joint dynamics. To exploit this in trajectory optimization, Rachel Schlossman and I designed an iterative linear programming based trajectory optimizer which uses trust regions only for the robot impedance portion of the problem. See our <a href="https://arxiv.org/pdf/1802.10190.pdf">ROBIO 2018</a> paper for details. Rachel and I have been working to extend this to optimize the falling and jumping behavior of a robotic leg with series elastic actuators.
-      </p>
-
-
-      <a name="MC"></a>
-      <h3>
-        Computationally Efficient Multi-Contact Locomotion Planning
-      </h3>
-      <p>
-        This project explores a numerically efficient planning strategy for legged robots. Luis and I propose to decompose the kinodynamic planning problem into a geometric search for center of mass paths and a dynamic verification of the center of mass path. Geometric search is more tractable than kinodynamic search, and geometric search with an additional feasibility/cost function computation is not all that different from geometric search with obstacles. It also is beneficial to search in a low dimensional space, like center of mass paths, since the curse of dimensionality makes it hard to search larger spaces. But this all hinges on the simplicity of a dynamic check and cost evaluation procedure, which is what we focus on. <a href="http://ieeexplore.ieee.org/abstract/document/7759571/"><b>[IROS 2016 Paper]</b></a>
-      </p>
-<iframe width="300" src="https://www.youtube.com/embed/o1YkloKvPxA" frameborder="0" allowfullscreen></iframe>
-      <iframe width="300" src="https://www.youtube.com/embed/9voQCAyvg0k" frameborder="0" allowfullscreen></iframe><br>
-      <p> 
-        What we call the "dynamic optimization" includes the selection of foot steps and hand-holds from a finite list of possible contacts as well as the velocity profile over the center of mass path. Our approach bears similarity both to phase space locomotion planning techniques for bipedal walking and the minimum time trajectory scaling problem for robot arms. A fundamental aspect of the algorithm's efficiency is its use of linear programming with reuse of the active set of inequality constraints.
-        <br>
-        <!-- <a href=mcplan.html><b>[Project Page]</b></a>  -->
-        
-      </p>
-
-      <a name="Hume"></a>
-      <h3>
-        Point Foot Biped Robot Hume Team
-      </h3>
-      <p>
-      In 2013 I worked with Donghyun Kim and Ye Zhao, as well as our advisor Luis Sentis, to control our series elastic biped robot. My focus was on real-time latency reduction, attitude estimation, and footstep planner theory. More detail is available in our journal paper <a href="http://wholebodycontrol.eu/awards.html">[Finalist, Best WBC Paper 2016]</a><a href="http://wholebodycontrol.eu/awards.html">[Finalist, Best WBC-Video 2016]</a><a href="http://ieeexplore.ieee.org/abstract/document/7736085/">[Link]</a><a href="https://www.researchgate.net/profile/Donghyun_Kim34/publication/309706836_Stabilizing_Series-Elastic_Point-Foot_Bipeds_Using_Whole-Body_Operational_Space_Control/links/5823f06408ae61258e3cd0c5.pdf">[pdf]</a> 
-      </p>
-      <img src="images/hume_with_leds.jpg" height="220"><iframe height="220" src="https://www.youtube.com/embed/_5ZN9hqWHms" frameborder="0" allowfullscreen></iframe>
-      <p> Figs: The Hume Robot uses red LED position markers which are (approximately) located by ceiling mounted cameras in the lab. The right video shows the orientation estimator tracking simulated movements. My data fusion algorithm tracks the robot torso pose implied by a noisy stream of led data. The algorithm is designed to handle occasional data omissions, since the cameras do not reliably find all the LEDs. The filter does not spend cycles maintaining a covariance estimate like the Kalman filter, but it does acknowledge that the belief in current knowledge must be weighed against the information content of each set of detected LEDs: fusing the data via weighted least squares naturally downplays frames with few LEDs detected, and if the LEDs are sparse enough to leave geometric ambiguity, then the algorithm will naturally rely on the past data. A state of the art eigenvalue algorithm is used to cast the direction cosine matrix to a quaternion (and then back), to ensure validity of the rotation without sacrificing the linearity of the least squares problem. </p>
-      
-      
-
-      <a name="IHMC"></a>
-      <h3>
-        Team IHMC Virtual Robotics Competition
-      </h3>
-
-      <p> 
-        The DARPA Robotics Competition's initial round, a virtual robotics competition in the simulation engine Gazebo, featured many difficult challenges for the state of the art robot control software — navigating rough terrain, operator bandwidth caps, noisy simulated LIDAR data, and getting into and out of a simulated all terrain vehicle. IHMC's approach was solidly grounded in shared autonomy and practical management for large teams of user-interface programmers <a href="http://ieeexplore.ieee.org/document/7029992/">[Humanoids 2013]</a>. While I certainly can't claim credit for the wild success of such a large team, I certainly tackled a respectable number of IHMC's agile planning "story cards" including
-        <ul>
-          <li>LIDAR Simulation in jMonkeyEngine</li>
-          <iframe height="220" src="https://www.youtube.com/embed/GDPpwRgakPM?start=180" frameborder="0" allowfullscreen></iframe>
-          <li>Quad-, Oct-, and Hypercube-tree classes for LIDAR processing (watch above)</li>
-          <iframe height="220" src="https://www.youtube.com/embed/Zp4DqsjMiNM?start=780" frameborder="0" allowfullscreen></iframe>
-          <li>Cylindrical Grasp primitives in Twan Koolen's LP reaction wrench distributor (Award finalist: <a href="http://www.worldscientific.com/doi/abs/10.1142/S0219843616500079">[IJHR]</a>, for <a href="http://wholebodycontrol.eu/awards.html">best WBC paper of 2016</a>), which proved critical to our car ingress and egress strategy (above)</li>
-          <iframe height="220" src="https://www.youtube.com/embed/SWe9ge0rR0E?start=690" frameborder="0" allowfullscreen></iframe>
-          <li>Geometric Footstep planning and user interface</li>
-          <li>Automatic footstep height and tilt based on the quad-tree</li>
-          <iframe height="220" src="https://www.youtube.com/embed/vTMPJGCbaoI?start=33" frameborder="0" allowfullscreen></iframe>
-          <li>Various unspeakable hacks</li>
-        </ul> 
-      </p>
-      
-
 
    </article>
  </div>
