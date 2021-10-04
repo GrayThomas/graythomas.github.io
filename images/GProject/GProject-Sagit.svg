@@ -43,18 +43,19 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="68.361676"
-     inkscape:cy="175.98304"
+     inkscape:zoom="2.8"
+     inkscape:cx="244.88715"
+     inkscape:cy="119.37031"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g1916"
      showgrid="false"
      units="px"
-     inkscape:window-width="1399"
-     inkscape:window-height="849"
-     inkscape:window-x="315"
-     inkscape:window-y="71"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false" />
   <metadata
      id="metadata12247">
     <rdf:RDF>
@@ -468,25 +469,25 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.17140484px;line-height:1.25;font-family:Merriweather;-inkscape-font-specification:Merriweather;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.05214256"
-         x="134.68396"
+         x="135.98923"
          y="99.943619"
          id="text1879"
          inkscape:export-filename="Q:\ExoData\LinuxWindowsSwap\website-img\example-project-300dpi.png"
          inkscape:export-xdpi="300"
          inkscape:export-ydpi="300"><tspan
            sodipodi:role="line"
-           x="134.68396"
+           x="135.98923"
            y="99.943619"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Merriweather;-inkscape-font-specification:Merriweather;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.05214256"
            id="tspan1877">Strength Amplification</tspan><tspan
            id="tspan1886"
            sodipodi:role="line"
-           x="134.68396"
+           x="135.98923"
            y="105.15788"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Merriweather;-inkscape-font-specification:Merriweather;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.05214256">Whole Body Control</tspan><tspan
            id="tspan1888"
            sodipodi:role="line"
-           x="134.68396"
+           x="135.98923"
            y="110.37213"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Merriweather;-inkscape-font-specification:Merriweather;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.05214256">For Exoskeletons</tspan></text>
       <g
@@ -495,31 +496,10 @@
         <rect
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
            id="rect1909"
-           width="52.14238"
-           height="13.808456"
-           x="105.93353"
+           width="50.41502"
+           height="12.503195"
+           x="107.6609"
            y="66.790367" />
-        <text
-           id="text1907"
-           y="76.62603"
-           x="109.28122"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.40388632px;line-height:1.25;font-family:Merriweather;-inkscape-font-specification:Merriweather;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09254857"
-           xml:space="preserve"><tspan
-             id="tspan1901"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.25264454px;font-family:Merriweather;-inkscape-font-specification:Merriweather;text-align:start;text-anchor:start;fill:#204a87;stroke-width:0.09254857"
-             y="76.62603"
-             x="109.28122"
-             sodipodi:role="line">Pre-Print</tspan><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Merriweather;-inkscape-font-specification:Merriweather;text-align:start;text-anchor:start;stroke-width:0.09254857"
-             y="86.513504"
-             x="109.28122"
-             sodipodi:role="line"
-             id="tspan1903" /><tspan
-             id="tspan1905"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Merriweather;-inkscape-font-specification:Merriweather;text-align:start;text-anchor:start;stroke-width:0.09254857"
-             y="95.768364"
-             x="109.28122"
-             sodipodi:role="line" /></text>
       </g>
       <image
          width="22.404482"
@@ -906,5 +886,171 @@
          height="4.8258233"
          width="10.593271" />
     </g>
+    <g
+       id="g2258"
+       transform="matrix(0.05363271,0,0,0.05363271,50.462681,247.1482)"
+       style="stroke-width:4.93324518">
+	<g
+   id="g2220"
+   style="stroke-width:4.93324518">
+		<path
+   id="path2210"
+   d="m 198.8,120.5 h -11.2 v -15 h 11.2 c 0,-20.4 7.1,-26.6 26.9,-26.6 3.7,0 7.5,0.3 11.2,0.4 v 16.4 c -2.2,-0.3 -4.2,-0.4 -6.3,-0.4 -5.3,0 -8.6,0.7 -8.6,7.1 v 3.1 h 13.9 v 15 H 222 v 55.9 h -23.2 z"
+   class="st0"
+   inkscape:connector-curvature="0"
+   style="fill:#706f6f;stroke-width:4.93324518" />
+
+		<path
+   id="path2212"
+   d="m 240.4,105.5 h 22.5 v 12.4 h 0.3 c 3.4,-9 11.3,-13.8 21.3,-13.8 1.8,0 3.7,0.1 5.5,0.5 v 21.2 c -3,-0.8 -5.7,-1.4 -8.9,-1.4 -11.5,0 -17.5,7.9 -17.5,16.8 v 35.1 h -23.2 z"
+   class="st0"
+   inkscape:connector-curvature="0"
+   style="fill:#706f6f;stroke-width:4.93324518" />
+
+		<path
+   id="path2214"
+   d="m 327.5,160.7 c 10.8,0 14.2,-10.7 14.2,-19.7 0,-9 -3.4,-19.8 -14.2,-19.8 -10.8,0 -14.1,10.8 -14.1,19.8 0,9 3.3,19.7 14.1,19.7 m 0,-57.2 c 22,0 37.4,16.3 37.4,37.6 0,21.3 -15.4,37.4 -37.4,37.4 -22,0 -37.3,-16.1 -37.3,-37.4 0,-21.4 15.3,-37.6 37.3,-37.6"
+   class="st0"
+   inkscape:connector-curvature="0"
+   style="fill:#706f6f;stroke-width:4.93324518" />
+
+		<path
+   id="path2216"
+   d="M 369.5,105.5 H 392 v 9.7 h 0.3 c 4.2,-7.2 13.8,-11.7 22.3,-11.7 23.6,0 25.5,17.2 25.5,27.5 v 45.5 h -23.2 v -34.3 c 0,-9.7 1.1,-19.5 -11.6,-19.5 -8.7,0 -12.6,7.4 -12.6,15.2 v 38.7 h -23.2 z"
+   class="st0"
+   inkscape:connector-curvature="0"
+   style="fill:#706f6f;stroke-width:4.93324518" />
+
+		<path
+   id="path2218"
+   d="M 492.3,120.5 H 478 v 32.2 c 0,5.6 3.3,6.8 8.3,6.8 1.9,0 4,-0.3 6,-0.3 v 17.1 c -4.2,0.1 -8.5,0.7 -12.7,0.7 -19.8,0 -24.9,-5.7 -24.9,-25 V 120.4 H 443 v -15 h 11.8 V 84.1 H 478 v 21.4 h 14.3 z"
+   class="st0"
+   inkscape:connector-curvature="0"
+   style="fill:#706f6f;stroke-width:4.93324518" />
+
+	</g>
+
+	<path
+   id="path2222"
+   d="m 498,105.5 h 23.2 v 70.9 H 498 Z m 23.2,-8.9 H 498 V 78.9 h 23.2 z"
+   class="st0"
+   inkscape:connector-curvature="0"
+   style="fill:#706f6f;stroke-width:4.93324518" />
+
+	<g
+   id="g2230"
+   style="stroke-width:4.93324518">
+		<path
+   id="path2224"
+   d="m 578.9,133.7 c -0.4,-7.9 -6,-14.5 -13.8,-14.5 -8.2,0 -13.7,5.9 -15,14.5 z m -28.8,12.9 c 0.4,9.7 6,16.1 15.8,16.1 5.6,0 11.1,-2.6 13.2,-7.8 h 21.7 c -4.2,16.4 -19.4,23.5 -35.2,23.5 -23.1,0 -38.8,-13.9 -38.8,-37.7 0,-21.7 17.3,-37.3 38.3,-37.3 25.4,0 38.1,19.1 37,43.2 z"
+   class="st0"
+   inkscape:connector-curvature="0"
+   style="fill:#706f6f;stroke-width:4.93324518" />
+
+		<path
+   id="path2226"
+   d="m 607.8,105.5 h 22.5 v 12.4 h 0.3 c 3.4,-9 11.3,-13.8 21.3,-13.8 1.8,0 3.7,0.1 5.5,0.5 v 21.2 c -3,-0.8 -5.7,-1.4 -8.9,-1.4 -11.5,0 -17.5,7.9 -17.5,16.8 v 35.1 h -23.2 z"
+   class="st0"
+   inkscape:connector-curvature="0"
+   style="fill:#706f6f;stroke-width:4.93324518" />
+
+		<path
+   id="path2228"
+   d="m 683.3,153.1 c 0,3.6 1.5,6.1 3.8,7.9 2.2,1.6 5.3,2.5 8.6,2.5 4.5,0 10.9,-1.9 10.9,-7.5 0,-5.5 -7.2,-6.6 -11.3,-7.5 -14.6,-3.7 -32.9,-4.1 -32.9,-23.2 0,-17.1 18.4,-21.7 32.4,-21.7 15.6,0 31.8,4.5 32.6,22.9 H 706 c 0,-3 -1.1,-4.9 -3,-6.1 -1.9,-1.2 -4.5,-1.8 -7.4,-1.8 -3.8,0 -10,0.4 -10,5.3 0,6.7 15.6,7.9 26.2,10.2 14.3,2.9 18,13.2 18,19.1 0,19 -18,25.3 -34,25.3 -16.8,0 -34,-5.6 -34.7,-25.4 z"
+   class="st0"
+   inkscape:connector-curvature="0"
+   style="fill:#706f6f;stroke-width:4.93324518" />
+
+	</g>
+
+	<g
+   id="g2256"
+   style="stroke-width:4.93324518">
+		<g
+   id="g2238"
+   style="stroke-width:4.93324518">
+			<polygon
+   id="polygon2232"
+   points="67.2,151.9 -0.2,172.9 0,100.8 67.4,79.7 "
+   class="st1"
+   style="fill:#95c11f;stroke-width:4.93324518" />
+
+			<polygon
+   id="polygon2234"
+   points="112.9,183.3 67.2,151.9 67.4,79.7 113.1,111.2 "
+   class="st2"
+   style="fill:#efd500;stroke-width:4.93324518" />
+
+			<polygon
+   id="polygon2236"
+   points="112.9,183.3 45.5,204.3 -0.2,172.9 67.2,151.9 "
+   class="st3"
+   style="fill:#164194;stroke-width:4.93324518" />
+
+		</g>
+
+		<g
+   id="g2246"
+   style="stroke-width:4.93324518">
+			<polygon
+   id="polygon2240"
+   points="89.4,131.6 65.8,76.1 84.2,34.1 107.7,89.6 "
+   class="st4"
+   style="fill:#6f286a;stroke-width:4.93324518" />
+
+			<polygon
+   id="polygon2242"
+   points="151.4,121.1 89.4,131.6 107.7,89.6 169.6,79.6 "
+   class="st5"
+   style="fill:#0094cd;stroke-width:4.93324518" />
+
+			<polygon
+   id="polygon2244"
+   points="169.6,79.6 107.7,89.6 84.2,34.1 146,24.1 "
+   class="st6"
+   style="fill:#f39200;stroke-width:4.93324518" />
+
+		</g>
+
+		<g
+   id="g2254"
+   style="stroke-width:4.93324518">
+			<polygon
+   id="polygon2248"
+   points="62,34.2 67.4,79.7 21.4,71 15.9,25.5 "
+   class="st7"
+   style="fill:#d51317;stroke-width:4.93324518" />
+
+			<polygon
+   id="polygon2250"
+   points="87.5,8.7 62,34.2 15.9,25.5 41.4,0 "
+   class="st8"
+   style="fill:#31b7bc;stroke-width:4.93324518" />
+
+			<polygon
+   id="polygon2252"
+   points="87.5,8.7 92.8,54.4 67.4,79.7 62,34.2 "
+   class="st9"
+   style="fill:#007b3d;stroke-width:4.93324518" />
+
+		</g>
+
+	</g>
+
+</g>
   </g>
+  <style
+     id="style2208"
+     type="text/css">
+	.st0{fill:#706F6F;}
+	.st1{fill:#95C11F;}
+	.st2{fill:#EFD500;}
+	.st3{fill:#164194;}
+	.st4{fill:#6F286A;}
+	.st5{fill:#0094CD;}
+	.st6{fill:#F39200;}
+	.st7{fill:#D51317;}
+	.st8{fill:#31B7BC;}
+	.st9{fill:#007B3D;}
+</style>
 </svg>
